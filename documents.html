@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https://images.unsplash.com data:;">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta name="referrer" content="no-referrer">
+    <title>Documents & Forms | Ancient Oaks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="documents-page">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" rel="noopener">
+                    <span class="company-name">Ancient Oaks</span>
+                    <span class="tagline">Luxury Community Living</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" rel="noopener">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" rel="noopener">Residents <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="documents.html" rel="noopener">Documents & Forms</a></li>
+                        <li><a href="rules.html" rel="noopener">Rules & Guidelines</a></li>
+                        <li><a href="maintenance.html" rel="noopener">Maintenance Requests</a></li>
+                    </ul>
+                </li>
+                <li><a href="privacy.html" rel="noopener">Info</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="privacy-header">
+            <div class="container">
+                <h1>Documents & Forms</h1>
+                <p>Essential resources for our residents</p>
+            </div>
+        </section>
+
+        <section class="privacy-content">
+            <div class="container">
+                <div class="policy-section">
+                    <h2>HOA Documents</h2>
+                    <ul>
+                        <li><a href="#" class="document-link"><i class="fas fa-file-pdf"></i> Covenants, Conditions & Restrictions (CC&Rs)</a></li>
+                        <li><a href="#" class="document-link"><i class="fas fa-file-pdf"></i> Bylaws</a></li>
+                        <li><a href="#" class="document-link"><i class="fas fa-file-pdf"></i> Articles of Incorporation</a></li>
+                        <li><a href="#" class="document-link"><i class="fas fa-file-pdf"></i> Community Guidelines</a></li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>Forms</h2>
+                    <ul>
+                        <li><a href="#" class="document-link"><i class="fas fa-file-alt"></i> Architectural Review Application</a></li>
+                        <li><a href="#" class="document-link"><i class="fas fa-file-alt"></i> Resident Information Form</a></li>
+                        <li><a href="#" class="document-link"><i class="fas fa-file-alt"></i> Clubhouse Reservation Form</a></li>
+                        <li><a href="#" class="document-link"><i class="fas fa-file-alt"></i> Vehicle Registration Form</a></li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>Financial Documents</h2>
+                    <ul>
+                        <li><a href="#" class="document-link"><i class="fas fa-file-invoice-dollar"></i> Annual Budget</a></li>
+                        <li><a href="#" class="document-link"><i class="fas fa-file-invoice-dollar"></i> Financial Statements</a></li>
+                        <li><a href="#" class="document-link"><i class="fas fa-file-invoice-dollar"></i> Reserve Study</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Ancient Oaks Drive</p>
+                    <p><i class="fas fa-phone"></i> (234) 567-890</p>
+                    <p><i class="fas fa-envelope"></i> info@ancientoakshoa.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="documents.html" rel="noopener">HOA Documents</a></li>
+                        <li><a href="calendar.html" rel="noopener">Community Calendar</a></li>
+                        <li><a href="newsletter.html" rel="noopener">Newsletter</a></li>
+                        <li><a href="emergency.html" rel="noopener">Emergency Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Stay Connected</h4>
+                    <p>Sign up for community updates</p>
+                    <form class="newsletter-form" method="POST" action="/subscribe" autocomplete="off">
+                        <input type="email" name="email" placeholder="Enter your email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" maxlength="100">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ancient Oaks Homeowners Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js" defer></script>
+</body>
+</html>
