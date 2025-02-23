@@ -1,8 +1,8 @@
 // Initialize GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// Navigation menu toggle
-const menuToggle = document.querySelector('.menu-toggle');
+// Mobile Menu Toggle with enhanced functionality
+const menuToggle = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
 menuToggle?.addEventListener('click', () => {
@@ -10,9 +10,17 @@ menuToggle?.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
 });
 
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.nav-links') && !event.target.closest('.mobile-menu-btn')) {
+        navLinks.classList.remove('active');
+        menuToggle?.classList.remove('active');
+    }
+});
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         target?.scrollIntoView({
@@ -77,4 +85,16 @@ images.forEach(img => {
             scrub: true
         }
     });
+});
+
+// Add scroll indicator fade
+window.addEventListener('scroll', function() {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        if (window.scrollY > 100) {
+            scrollIndicator.style.opacity = '0';
+        } else {
+            scrollIndicator.style.opacity = '1';
+        }
+    }
 });
