@@ -74,6 +74,16 @@ main {
     color: var(--light-text);
 }
 
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -149,7 +159,7 @@ main {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Assets/IMG_229.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/IMG_1808.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -218,7 +228,7 @@ main {
 
 /* Documents Page Styles */
 .privacy-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Assets/IMG_1808.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/IMG_1808.jpg');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -228,7 +238,7 @@ main {
 
 .privacy-header h1 {
     font-size: 3.5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .privacy-content {
@@ -362,10 +372,43 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Design */
+/* Mobile Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 0 1.5rem;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        transform: none;
+        padding-left: 2rem;
+    }
+
+    .dropdown-content li a {
+        padding: 0.8rem 1rem;
     }
     
     .privacy-header h1 {
@@ -379,6 +422,18 @@ footer {
     
     .policy-section h2 {
         font-size: 1.8rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
     }
 }
 
